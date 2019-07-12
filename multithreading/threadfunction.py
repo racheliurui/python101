@@ -1,5 +1,7 @@
 import time
 import vars
+import config
+from random import randrange
 
 
 
@@ -10,6 +12,8 @@ def threadfunction1():
       print("threadfunction1" )  
       vars.balance=vars.balance+1
       print("threadfunction1, balance updated as " + str(vars.balance)  )  
+      # check if config value will be initiated multiple times
+      print("threadfunction1, value a in config as " + str(config.a)  )  
       time.sleep(1)
 
 
@@ -19,6 +23,8 @@ def threadfunction2():
       print("threadfunction2" )      
       vars.balance=vars.balance+1
       print("threadfunction2, balance updated as " + str(vars.balance)  )  
+      print("threadfunction2, value a in config as " + str(config.a)  )  
+      print("threadfunction2,==== normal randomvalue will be like " + str(randrange(10,20))  )  
       time.sleep(2)
   
 

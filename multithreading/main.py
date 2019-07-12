@@ -2,6 +2,7 @@ from threading import Thread
 import threadfunction
 import time
 import vars
+import config
 
 
 def main():
@@ -16,6 +17,7 @@ def main():
    t1.start()
    t2.start()
    t3.start()
+   print("main, value a in config as " + str(config.a)  )  
    while not vars.quitMain :
        pass
 
